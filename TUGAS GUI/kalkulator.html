@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator</title>
+</head>
+
+<style>
+.container{
+    width: 500px;
+    height: 400px;
+    margin: auto;
+    background-color: brown;
+    position: relative;
+}
+.judul{
+    margin: auto;
+    text-align: center;
+    padding-bottom: 20px;
+}
+.form1{
+    width: 300px;
+    height: 30px;
+    border-radius: 50px;
+    background-color: khaki;
+    margin: 20px auto;
+    text-align: center;
+    padding-top: 10px;
+}
+.form2{
+    width: 300px;
+    height: 30px;
+    border-radius: 50px;
+    background-color: khaki;
+    margin: 20px auto;
+    text-align: center;
+    padding-top: 10px;
+}
+.operasi{
+    width: 500px;
+    height: 30px;
+    background-color: coral;
+    padding-top: 10px;
+}
+</style>
+
+<script>
+    function tambah(){
+        var form1=document.getElementById("bil1").value;
+        var form2=document.getElementById("bil2").value;
+        var bilangan1=Number(form1);
+        var bilangan2=Number(form2);
+
+        var hasil=bilangan1+bilangan2;
+
+        document.getElementById("hasiltext").innerHTML=hasil;
+    }
+    function kurang(){
+        var form1=document.getElementById("bil1").value;
+        var form2=document.getElementById("bil2").value;
+        var bilangan1=Number(form1);
+        var bilangan2=Number(form2);
+        var hasil=bilangan1-bilangan2;
+
+        document.getElementById("hasiltext").innerHTML=hasil;
+    }
+    function kali(){
+        var form1=document.getElementById("bil1").value;
+        var form2=document.getElementById("bil2").value;
+        var bilangan1=Number(form1);
+        var bilangan2=Number(form2);
+        var hasil=bilangan1*bilangan2;
+
+        document.getElementById("hasiltext").innerHTML=hasil;
+    }
+    function bagi(){
+        var form1=document.getElementById("bil1").value;
+        var form2=document.getElementById("bil2").value;
+        var bilangan1=Number(form1);
+        var bilangan2=Number(form2);
+        var hasil=bilangan1/bilangan2;
+
+        document.getElementById("hasiltext").innerHTML=hasil;
+    }
+</script>
+
+<body>
+    <div class="container">
+
+        <div class="judul">
+            <h1>Kalkulator Javascript</h1>
+        </div>
+        
+        <div class="form1">
+            <input type="text" id="bil1"><br><br>
+        </div>
+
+        <div class="form2">
+            <input type="text" id="bil2"><br><br>
+        </div>
+
+        <div class="operasi">
+            <center>
+                <input type="button" onclick="tambah()" value="TAMBAH"></input>
+                <input type="button" onclick="kurang()" value="PENGURANGAN"></input>
+                <input type="button" onclick="kali()" value="PERKALIAN"></input>
+                <input type="button" onclick="bagi()" value="PEMBAGIAN"></input>
+            </center>
+        </div>
+
+        <div class="hasil">
+           <center>
+               <h1 id="hasiltext">...</h1>
+            </center> 
+        </div>
+
+    </div>
+</body>
+</html>

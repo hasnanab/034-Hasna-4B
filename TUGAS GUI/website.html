@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+.container{
+    width: 800px;
+    height: 1500px;
+    margin: auto;
+    border: 2px solid black;
+    position: relative;
+    margin-top: 150px;
+}
+.judul{
+    width: 800px;
+    height: 100px;
+    margin: auto;
+    border: 2px solid black;
+    /* text-align: center; */
+    box-sizing: border-box;
+    background-color:  rgb(253, 154, 200);
+}
+.judul h1{
+    text-shadow: 3px 2px red;
+}
+.menu{
+    width: 800px;
+    height: 50px;
+    border: 2px solid black;
+    box-sizing: border-box;
+    padding: 10px 10px 10px 10px;
+    background-color: pink;
+}
+.menu a{
+    text-decoration: none;
+    color: salmon;
+}
+.menu a:hover{
+    background-color: blue;
+    color: black;
+}
+.benner{
+    width: 800px;
+    height: 200px;
+    background-color:papayawhip;
+    background-image: url(voca.jpg);
+    background-size: cover;
+    background-position-y: 500px;
+}
+.judulartikel{
+    width: 800px;
+    height: 20px;
+    padding-left: 10px;
+    padding-bottom: 5px;
+}
+.konten{
+    width: 800px;
+    height: 300px;
+    padding-left: 10px;
+    box-sizing: border-box;
+    overflow: auto;
+    background-color: powderblue;
+
+}
+.konten img{
+    float: left;
+    padding: 20px 20px;
+}
+.gallery{
+    background-color: plum;
+    margin: 5px 5px 5px 5px;
+    width: 190px;
+    height: 100px;
+    float: left;
+    background-image: url(voca.jpg);
+    background-size: cover;
+}
+.thumbnail{
+    width: 150px;
+    height: 40px;
+    margin: auto;
+    background-color: sandybrown;
+}
+.ribbon{
+    width: 128px;
+    height: 128px;
+    /* background-color: red; */
+    position: absolute;
+    background-image: url(ribbon.png);
+    left: 690px;
+    top: -15px;
+}
+.trans{
+    width: 200px;
+    height: 70px;
+    background-color: red;
+    position: absolute;
+    opacity: 0.2;
+    top: 15px;
+}
+.div2 {
+  background-color:cadetblue;
+  border: none;
+  color: white;
+  padding: 20px 30px;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  margin: 2px 2px;
+  cursor: pointer;
+  position:fixed;
+  border-radius:20px;
+  right: 2%;
+}
+.button1 {font-size: 16px; background-color: violet}
+.button2 {font-size: 16px; margin-top: 10px; background-color: violet}
+.cobaevent1{
+  width: 150px;
+  height: 150px;
+  background-color: crimson;
+}
+.cobaevent2{
+  width: 150px;
+  height: 150px;
+  background-color: black;
+}
+.sidebar{
+    width: 200px;
+    height: 500px;
+    background-color: plum;
+}
+
+</style>
+<body>
+
+<div class="div2">
+    <button class="button1" onclick="ubahwarna_dark()">Mode Malam</button><br>
+    <button class="button2" onclick="ubahwarna_light()">Mode Siang</button>
+</div>
+    
+    <div id="cobaeventku" class="cobaevent" onmouseup="divkelakuan()" onmousedown="divkelakuan1()"></div>
+    
+    <script>
+        function ubahwarna_dark(){
+            document.getElementById('konten').style.backgroundColor="black";
+            document.getElementById('konten').style.color="white";
+        }
+        function ubahwarna_light(){
+            document.getElementById('konten').style.backgroundColor="white";
+            document.getElementById('konten').style.color="black";
+        }
+
+        function divkelakuan(){
+            document.getElementById('cobaeventku').className="cobaevent1";
+        }
+        function divkelakuan1(){
+            document.getElementById('cobaeventku').className="cobaevent2";
+        }
+    </script>
+
+ <div class="container">
+
+    <div class="ribbon">    </div>
+
+    <div class="trans">     </div>
+
+     <div class="judul">
+        <h1>My Website</h1>         
+     </div>
+
+     <div class="menu">
+         <a href="#">Home</a>
+         <a href="#">Profile</a>
+         <a href="#">Contact</a>
+     </div>
+
+     <div class="benner">
+
+     </div>
+
+     <div class="judulartikel">
+        <h2>Judul Artikel</h2>
+     </div>
+
+     <div id="konten" class="konten">
+        <img src="logoub.png" height="250px" width="250px">
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, quis saepe recusandae voluptatibus ipsam non. Ut, quia, quidem sapiente perspiciatis cum laudantium illo nisi sit ducimus minus dolore ipsum. Recusandae!</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem quisquam ex iure officiis, molestias eaque ratione, illum non ipsa ad nulla natus? Cumque placeat fugiat commodi! Fugiat quisquam quibusdam praesentium. 
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, qui. Tenetur quam aperiam reprehenderit quia cupiditate dolorem iste quibusdam tempore animi nisi laboriosam sit provident deleniti, autem quo odit iusto!
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo officia veritatis asperiores inventore tempora? Mollitia, eveniet neque consectetur quae obcaecati illum, vitae sit aut deleniti, quasi dolore tempora quibusdam est.</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem quisquam ex iure officiis, molestias eaque ratione, illum non ipsa ad nulla natus? Cumque placeat fugiat commodi! Fugiat quisquam quibusdam praesentium. 
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, qui. Tenetur quam aperiam reprehenderit quia cupiditate dolorem iste quibusdam tempore animi nisi laboriosam sit provident deleniti, autem quo odit iusto!
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo officia veritatis asperiores inventore tempora? Mollitia, eveniet neque consectetur quae obcaecati illum, vitae sit aut deleniti, quasi dolore tempora quibusdam est.</p>
+    
+</div>
+<br><br><br><br>
+<div class="gallery"> 
+
+    <div class="thumbnail">
+        <p style="text-align: center;">halo</p>
+        
+    </div>
+</div>
+    <div class="gallery">2</div>
+    <div class="gallery">3</div>
+    <div class="gallery">4</div>
+    <div class="gallery">5</div>
+    <div class="gallery">6</div>
+    <div class="gallery">7</div>
+    <div class="gallery">8</div>
+
+</div>
+
+ </div>
+</body>
+</html>
